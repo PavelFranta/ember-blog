@@ -1,0 +1,7 @@
+<div class='flex font-light text-2xl px-4 pt-2'>
+  {{#each this.links as |link|}}
+    <LinkTo @route={{link.route}} class='pl-4'>
+      {{link.name}}
+    </LinkTo>
+  {{/each}}
+</div>
