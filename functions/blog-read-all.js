@@ -3,9 +3,7 @@ import serverless from 'serverless-http';
 
 const app = express();
 
-const addressWithPrefix = (address) => '/.netlify/functions/api' + address;
-
-app.get(addressWithPrefix('/'), (req, res) => {
+app.get('*', (req, res) => {
   res.json({ jmenoMojiLasky: 'zanetka' });
 });
 

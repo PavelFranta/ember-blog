@@ -6,15 +6,21 @@ module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     postcssOptions: {
       compile: {
-        plugins: [
-          // { module: require('postcss-import') }, // If you installed postcss-import
-          require('tailwindcss'),
-          // require('tailwindcss')('./app/styles/tailwind.config.js'), // If you have a Tailwind config file.
-        ],
+        plugins: [require('tailwindcss')],
       },
     },
     // Add options here
   });
 
-  return require('@embroider/compat').compatBuild(app, Webpack);
+  return require('@embroider/compat').compatBuild(app, Webpack, {
+    staticAddonTestSupportTrees: true,
+    staticAddonTrees: true,
+    staticHelpers: true,
+    staticModifiers: true,
+    staticComponents: true,
+    splitAtRoutes: ['route.name'], // can also be a RegExp
+    packagerOptions: {
+      webpackConfig: {},
+    },
+  });
 };

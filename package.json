@@ -73,6 +73,7 @@
     "@embroider/compat": "^0.47.2",
     "@embroider/core": "^0.47.2",
     "@embroider/webpack": "^0.47.2",
+    "ember-concurrency": "^2.2.0",
     "helmet": "^4.6.0",
     "serverless-http": "^2.7.0",
     "webpack": "^5.64.4"
