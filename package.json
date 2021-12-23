@@ -20,7 +20,8 @@
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
-    "test:ember": "ember test"
+    "test:ember": "ember test",
+    "dev": "netlify dev"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -72,6 +73,8 @@
     "@embroider/compat": "^0.47.2",
     "@embroider/core": "^0.47.2",
     "@embroider/webpack": "^0.47.2",
+    "helmet": "^4.6.0",
+    "serverless-http": "^2.7.0",
     "webpack": "^5.64.4"
   }
 }
